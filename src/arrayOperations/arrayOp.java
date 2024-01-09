@@ -51,12 +51,25 @@ public class arrayOp {
 		
 		//copying range of array into other array
 		int newArr[] = Arrays.copyOfRange(arr, 0,3);
-		System.out.println("new array:");
+		/*System.out.println("new array:");
 		for(int i:newArr)
-			System.out.println(i);
+			System.out.println(i);*/
 	}
 	
-	
+	public static void arrSort(int arr[]) {
+		System.out.println("Sorted array is:");
+		for(int i=0;i<arr.length;i++) {
+			int temp = 0;
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]>arr[j]) {
+					temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+			System.out.println(arr[i]);
+		}
+	}
 	
 
 	public static void main(String[] args) {
@@ -64,6 +77,7 @@ public class arrayOp {
 		printArr();
 		int array[]={43,57,18,24,213,78,23};
 		printMin(array);
+		arrSort(array);
 	}
 
 }
