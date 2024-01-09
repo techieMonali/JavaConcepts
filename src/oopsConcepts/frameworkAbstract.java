@@ -14,6 +14,9 @@ public abstract class frameworkAbstract {
 	public abstract void start();
 	public abstract void end();
 	
+	public void printHello() {
+		System.out.println("Hello this is non-abstract method abstract class");
+	}
 	
 }
 
@@ -32,12 +35,13 @@ class implementationAbstract extends frameworkAbstract implements shape,draw{ //
 	@Override
 	public void circle() {
 		// TODO Auto-generated method stub
-		
+		printHello(); //calling non-abstract method without creating object
 	}
 
 	@Override
 	public void triangle() {
 		// TODO Auto-generated method stub
+		
 		
 	}
 	
